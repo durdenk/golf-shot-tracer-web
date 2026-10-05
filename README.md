@@ -24,10 +24,16 @@ See [GitHub Pages setup](https://docs.github.com/en/pages/getting-started-with-g
 
 For a project site, public paths are:
 
-- `https://<owner>.github.io/<repository>/`
-- `https://<owner>.github.io/<repository>/privacy-policy.html`
-- `https://<owner>.github.io/<repository>/privacy-policy.html#data-deletion`
-- `https://<owner>.github.io/<repository>/terms-of-use.html`
+- `https://durdenk.github.io/golf-shot-tracer-web/`
+- `https://durdenk.github.io/golf-shot-tracer-web/privacy-policy.html`
+- `https://durdenk.github.io/golf-shot-tracer-web/privacy-policy.html#data-deletion`
+- `https://durdenk.github.io/golf-shot-tracer-web/terms-of-use.html`
+
+Public website repository: https://github.com/durdenk/golf-shot-tracer-web
+
+Private Android repository: https://github.com/durdenk/golf-shot-tracer
+
+`GolfExternalLinks.kt` defines the same destinations for both Settings and Premium.
 
 For advertising verification, make sure `app-ads.txt` is reachable at the
 root path of the developer website hostname (for example,
@@ -42,8 +48,8 @@ See [AdMob app-ads.txt setup](https://support.google.com/admob/answer/9363762?hl
 - Contact: `cukkacreatives@gmail.com`, reused from the reference project's privacy contact.
 - `app-ads.txt` reuses publisher `pub-6793071222149082` from the reference project; use it only if Golf uses the same AdMob publisher account.
 - The Play link uses the app's package ID; availability has not been confirmed.
-- The policies describe the current source: on-device videos, local data, Google Maps/location, Open Topo Data coordinates, Android backup, and Google Play Billing price queries. Purchase/restore flows, advertising, and developer analytics are currently absent. Update the policies when those integrations change.
-- Website files are prepared locally; no remote repository or live site was created by this change.
+- The policies describe the current source: on-device videos, local data, Google Maps/location, Open Topo Data coordinates, Android backup, Google Play subscriptions (purchase/restore/acknowledgement), and Firebase Analytics usage events. Advertising ID collection and ad personalization signals are disabled. No advertising SDK is integrated.
+- The live privacy and terms URLs returned HTTP 200 on October 5, 2026. The live privacy copy still describes the earlier version without Firebase Analytics. Publish the updated local legal files to the public repository before distributing this release; this code change does not publish the website.
 
 ## Local preview
 
